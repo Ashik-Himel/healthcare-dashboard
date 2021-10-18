@@ -11,20 +11,23 @@
 body {
   font-family: 'Mulish', sans-serif;
   background: #00e8ff;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 232, 255, 0.2)), to(rgba(255, 0, 232, 0.2)));
-  background: linear-gradient(90deg, rgba(0, 232, 255, 0.2) 0%, rgba(255, 0, 232, 0.2) 100%);
-  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 232, 255, 0.4)), to(rgba(255, 0, 232, 0.4)));
+  background: linear-gradient(90deg, rgba(0, 232, 255, 0.4) 0%, rgba(255, 0, 232, 0.4) 100%);
+  height: 900px;
+}
+
+img {
+  max-width: 100%;
 }
 
 .dashboard {
   width: 80%;
-  height: 600px;
   position: relative;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 15px;
   display: -ms-grid;
   display: grid;
@@ -73,7 +76,7 @@ body {
   padding: 3rem 1.5rem 2rem;
 }
 
-.dashboard__second__heading, .dashboard__third__heading {
+.dashboard__second__heading, .dashboard__second__chart__heading, .dashboard__third__heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,6 +105,122 @@ body {
   border-radius: 3px;
 }
 
+.dashboard__second__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.dashboard__second__card__first, .dashboard__second__card__second, .dashboard__second__card__third {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.dashboard__second__card__first div, .dashboard__second__card__second div, .dashboard__second__card__third div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+
+.dashboard__second__card__first div i, .dashboard__second__card__second div i, .dashboard__second__card__third div i {
+  background-color: #F8DEBD;
+  color: #E79B38;
+  font-size: 2rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+}
+
+.dashboard__second__card__first > small, .dashboard__second__card__second > small, .dashboard__second__card__third > small {
+  display: block;
+  margin-top: 0.8rem;
+}
+
+.dashboard__second__card__first > small span, .dashboard__second__card__second > small span, .dashboard__second__card__third > small span {
+  font-size: 2rem;
+}
+
+.dashboard__second__card__first .badge, .dashboard__second__card__second .badge, .dashboard__second__card__third .badge {
+  background-color: #F8DEBD;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+.dashboard__second__card__first img, .dashboard__second__card__second img, .dashboard__second__card__third img {
+  display: block;
+}
+
+.dashboard__second__card__second div i {
+  background-color: #FBF0F3;
+  color: #CA6B6E;
+}
+
+.dashboard__second__card__second .badge {
+  background-color: #FBF0F3;
+}
+
+.dashboard__second__card__third div i {
+  background-color: #D0FBFF;
+  color: #478F96;
+}
+
+.dashboard__second__card__third .badge {
+  background-color: #D0FBFF;
+}
+
+.dashboard__second__chart, .dashboard__second__footer {
+  margin-top: 2rem;
+  padding: 1.5rem 1rem 1rem;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.dashboard__second__chart__heading__second__btn {
+  color: rgba(0, 0, 0, 0.6) !important;
+  border-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.dashboard__second__chart img, .dashboard__second__footer img {
+  display: block;
+  padding-top: 1.5rem;
+  margin: 0 auto;
+}
+
+.dashboard__second__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 90%;
+}
+
+.dashboard__second__footer small {
+  background-color: #D0FBFF;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
 .dashboard__third {
   height: 100%;
   background-color: #282828;
@@ -112,10 +231,203 @@ body {
   color: white;
 }
 
-.dashboard__third__heading__second a {
+.dashboard__third__heading__second__btn, .dashboard__second__chart__heading__second__btn {
   color: white;
   text-decoration: none;
   padding: 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 5px;
+}
+
+.dashboard__third__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+  -ms-grid-rows: 80px 80px;
+      grid-template-rows: 80px 80px;
+  padding: 1rem;
+  gap: 15px;
+      grid-template-areas: "f s" "t s";
+}
+
+.dashboard__third__grid__first {
+  background-color: #F8DEBD;
+  padding: 0.5rem;
+  border-radius: 5px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: f;
+}
+
+.dashboard__third__grid__first img {
+  max-width: 75%;
+  display: block;
+  margin-left: auto;
+}
+
+.dashboard__third__grid__first div {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard__third__grid__second {
+  background-color: #4A4949;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: white;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: s;
+}
+
+.dashboard__third__grid__second span {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.dashboard__third__grid__second div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem auto;
+}
+
+.dashboard__third__grid__second div span:first-child {
+  font-size: 1.5rem;
+}
+
+.dashboard__third__grid__second div small:last-child {
+  background-color: #D0FBFF;
+  color: black;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+.dashboard__third__grid__third {
+  background-color: #D0FBFF;
+  padding: 0.5rem;
+  border-radius: 5px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: t;
+}
+
+.dashboard__third__grid__third img {
+  max-width: 75%;
+  display: block;
+  margin-left: auto;
+}
+
+.dashboard__third__grid__third div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+
+.dashboard__third hr {
+  background-color: #4F4E4E;
+  height: 1px;
+  width: 80%;
+  margin: 1.5rem auto 0;
+}
+
+.dashboard__third__body {
+  padding: 1.5rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard__third__body__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.dashboard__third__body__text h4 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.dashboard__third__body__text > small {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.dashboard__third__body__text > span {
+  font-size: 0.6rem;
+  background-color: #5E5E5E;
+  display: inline-block;
+  padding: 0.3rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.dashboard__third__body__text div {
+  width: 100px;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dashboard__third__body__text div small {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard__third__body__text div span {
+  display: block;
+  font-weight: 500;
+}
+
+.dashboard__third__body__text div span .uil-arrow-up {
+  color: red;
+}
+
+.dashboard__third__body__text div span .uil-arrow-down {
+  color: green;
+}
+
+.dashboard__third__body__image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.dashboard__third__body__image img {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
 }
