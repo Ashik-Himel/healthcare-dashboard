@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+body {
+    font-family: 'Mulish', sans-serif;
+    background: rgb(0,232,255);
+    background: linear-gradient(90deg, rgba(0,232,255,0.2) 0%, rgba(255,0,232,0.2) 100%);
+    height: 100vh;
+}
+
+.dashboard {
+    width: 80%;
+    height: 600px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 80px 3fr 2fr;
+
+    &__first {
+        height: 100%;
+
+        &__icons {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border-radius: 15px;
+            gap: 2rem;
+            padding-top: 3rem;
+        }
+
+        & img {
+            width: 40px;
+        }
+        & i {
+            font-size: 1.5rem;
+
+            &.active {
+                background-color: black;
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    &__second {
+        padding: 3rem 1.5rem 2rem;
+
+        &__heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__first {
+
+                & small {
+                    color: gray;
+                }
+            }
+            &__second {
+                display: flex;
+                gap: 1.5rem;
+
+                & i {
+                    padding: 0.4rem 0.5rem;
+                    border: 1px solid rgb(190, 190, 190);
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+    &__third {
+        height: 100%;
+        background-color: #282828;
+        border-radius: 15px;
+
+        &__heading {
+            @extend .dashboard__second__heading , .dashboard__second;
+
+            &__first {
+
+                & h3 {
+                    color: white;
+                }
+            }
+            &__second {
+
+                & a {
+                    color: white;
+                    text-decoration: none;
+                    padding: 0.5rem;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  background: #00e8ff;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 232, 255, 0.2)), to(rgba(255, 0, 232, 0.2)));
+  background: linear-gradient(90deg, rgba(0, 232, 255, 0.2) 0%, rgba(255, 0, 232, 0.2) 100%);
+  height: 100vh;
+}
+
+.dashboard {
+  width: 80%;
+  height: 600px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80px 3fr 2fr;
+      grid-template-columns: 80px 3fr 2fr;
+}
+
+.dashboard__first {
+  height: 100%;
+}
+
+.dashboard__first__icons {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.dashboard__first img {
+  width: 40px;
+}
+
+.dashboard__first i {
+  font-size: 1.5rem;
+}
+
+.dashboard__first i.active {
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.dashboard__second, .dashboard__third__heading {
+  padding: 3rem 1.5rem 2rem;
+}
+
+.dashboard__second__heading, .dashboard__third__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard__second__heading__first small {
+  color: gray;
+}
+
+.dashboard__second__heading__second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.dashboard__second__heading__second i {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #bebebe;
+  border-radius: 3px;
+}
+
+.dashboard__third {
+  height: 100%;
+  background-color: #282828;
+  border-radius: 15px;
+}
+
+.dashboard__third__heading__first h3 {
+  color: white;
+}
+
+.dashboard__third__heading__second a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
