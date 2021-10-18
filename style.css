@@ -13,7 +13,6 @@ body {
   background: #00e8ff;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 232, 255, 0.4)), to(rgba(255, 0, 232, 0.4)));
   background: linear-gradient(90deg, rgba(0, 232, 255, 0.4) 0%, rgba(255, 0, 232, 0.4) 100%);
-  height: 900px;
 }
 
 img {
@@ -21,26 +20,23 @@ img {
 }
 
 .dashboard {
-  width: 80%;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 15px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 80px 3fr 2fr;
-      grid-template-columns: 80px 3fr 2fr;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
 }
 
 .dashboard__first {
-  height: 100%;
+  width: 80px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
 .dashboard__first__icons {
-  height: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,7 +48,6 @@ img {
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
-  border-radius: 15px;
   gap: 2rem;
   padding-top: 3rem;
 }
@@ -74,6 +69,7 @@ img {
 
 .dashboard__second, .dashboard__third__heading {
   padding: 3rem 1.5rem 2rem;
+  margin-left: 80px;
 }
 
 .dashboard__second__heading, .dashboard__second__chart__heading, .dashboard__third__heading {
@@ -224,7 +220,6 @@ img {
 .dashboard__third {
   height: 100%;
   background-color: #282828;
-  border-radius: 15px;
 }
 
 .dashboard__third__heading__first h3 {
