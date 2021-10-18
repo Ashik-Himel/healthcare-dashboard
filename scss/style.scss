@@ -20,24 +20,21 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 80px 3fr 2fr;
 
     &__first {
-        width: 80px;
-        height: 100vh;
-        position: fixed;
-        left: 0;
-        top: 0;
+        height: 100%;
 
         &__icons {
-            height: 100vh;
+            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             background-color: white;
+            border-radius: 15px;
             gap: 2rem;
             padding-top: 3rem;
         }
@@ -59,7 +56,6 @@ body {
 
     &__second {
         padding: 3rem 1.5rem 2rem;
-        margin-left: 80px;
 
         &__heading {
             display: flex;
@@ -87,6 +83,7 @@ body {
     &__third {
         height: 100%;
         background-color: #282828;
+        border-radius: 15px;
 
         &__heading {
             @extend .dashboard__second__heading , .dashboard__second;
